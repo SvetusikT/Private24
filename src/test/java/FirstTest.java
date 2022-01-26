@@ -24,7 +24,7 @@ public class FirstTest {
         $(By.name("amount")).sendKeys("123");
         $(".cnKPTH").click();
         $("#app > div.root_2L2ydAMddU > section > div > div.root_1JzrV6kl0D > div.content_19lkXZSYWo > div.root_3JkwQInzop > form > div:nth-child(3) > div > div.currency_1ZfwGXR-42 > div > div > div.sc-gzOgki.llrwTX > div > div > div > div > button:nth-child(2)").click();
-        $(".fMXqZt").click();
+        $("#app > div.root_2L2ydAMddU > section > div > div.root_1JzrV6kl0D > div.content_19lkXZSYWo > div.root_3JkwQInzop > form > div.textCenter_nDBAewjIXE > div > button > div").click();
 
 //        Selenide.open("https://www.google.com/");
 //
