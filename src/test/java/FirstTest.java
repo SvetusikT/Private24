@@ -25,9 +25,13 @@ public class FirstTest {
         $(By.name("amount")).sendKeys("123");
         $x("//span[text()='UAH']").click();
         $x("//button[@title='USD']").click();
-        $x("//button[text()='Переказати']").click();
+        $x("//button[@type='submit']").click();
 
+        //Проверка
 
+        Selenide.$$x("//span[@data-qa-node='payer-card']").shouldHave(CollectionCondition.texts("4552 3314 4813 8217"));
+        Selenide.$$x("//span[@data-qa-node='receiver-card']").shouldHave(CollectionCondition.itemWithText("4004 1591 1544 9003"));
+        Selenide.$$x("//div[@data-qa-node='payer-amount']").shouldHave(CollectionCondition.itemWithText("123 USD"));
         Selenide.$$("button").shouldHave(CollectionCondition.itemWithText("Додати в кошик"));
     }
 }
